@@ -7,3 +7,30 @@ C:\Users\Dell\source\repos\POD Szyfr PK\POD Szyfr PK\obj\Debug\POD Szyfr PK.cspr
 C:\Users\Dell\source\repos\POD Szyfr PK\POD Szyfr PK\obj\Debug\POD Szyfr PK.csproj.CopyComplete
 C:\Users\Dell\source\repos\POD Szyfr PK\POD Szyfr PK\obj\Debug\POD Szyfr PK.exe
 C:\Users\Dell\source\repos\POD Szyfr PK\POD Szyfr PK\obj\Debug\POD Szyfr PK.pdb
+C:\Users\bk\Desktop\Sliding-column-cipher\POD Szyfr PK\bin\Debug\POD Szyfr PK.exe
+C:\Users\bk\Desktop\Sliding-column-cipher\POD Szyfr PK\bin\Debug\POD Szyfr PK.pdb
+C:\Users\bk\Desktop\Sliding-column-cipher\POD Szyfr PK\bin\Debug\ClassLibrary1.dll
+C:\Users\bk\Desktop\Sliding-column-cipher\POD Szyfr PK\bin\Debug\ClassLibrary1.pdb
+C:\Users\bk\Desktop\Sliding-column-cipher\POD Szyfr PK\obj\Debug\POD Szyfr PK.csprojAssemblyReference.cache
+C:\Users\bk\Desktop\Sliding-column-cipher\POD Szyfr PK\obj\Debug\POD Szyfr PK.csproj.CoreCompileInputs.cache
+C:\Users\bk\Desktop\Sliding-column-cipher\POD Szyfr PK\obj\Debug\POD Szyfr PK.csproj.CopyComplete
+C:\Users\bk\Desktop\Sliding-column-cipher\POD Szyfr PK\obj\Debug\POD Szyfr PK.exe
+C:\Users\bk\Desktop\Sliding-column-cipher\POD Szyfr PK\obj\Debug\POD Szyfr PK.pdb
+C:\Users\Dell\Desktop\Sliding-column-cipher\Sliding-column-cipher\POD Szyfr PK\bin\Debug\POD Szyfr PK.exe
+C:\Users\Dell\Desktop\Sliding-column-cipher\Sliding-column-cipher\POD Szyfr PK\bin\Debug\POD Szyfr PK.pdb
+C:\Users\Dell\Desktop\Sliding-column-cipher\Sliding-column-cipher\POD Szyfr PK\bin\Debug\ClassLibrary1.dll
+C:\Users\Dell\Desktop\Sliding-column-cipher\Sliding-column-cipher\POD Szyfr PK\bin\Debug\ClassLibrary1.pdb
+C:\Users\Dell\Desktop\Sliding-column-cipher\Sliding-column-cipher\POD Szyfr PK\obj\Debug\POD Szyfr PK.csprojAssemblyReference.cache
+C:\Users\Dell\Desktop\Sliding-column-cipher\Sliding-column-cipher\POD Szyfr PK\obj\Debug\POD Szyfr PK.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\Sliding-column-cipher\Sliding-column-cipher\POD Szyfr PK\obj\Debug\POD Szyfr PK.csproj.CopyComplete
+C:\Users\Dell\Desktop\Sliding-column-cipher\Sliding-column-cipher\POD Szyfr PK\obj\Debug\POD Szyfr PK.exe
+C:\Users\Dell\Desktop\Sliding-column-cipher\Sliding-column-cipher\POD Szyfr PK\obj\Debug\POD Szyfr PK.pdb
+C:\Users\Dell\Desktop\Sliding-column-cipher\POD Szyfr PK\bin\Debug\POD Szyfr PK.exe
+C:\Users\Dell\Desktop\Sliding-column-cipher\POD Szyfr PK\bin\Debug\POD Szyfr PK.pdb
+C:\Users\Dell\Desktop\Sliding-column-cipher\POD Szyfr PK\bin\Debug\ClassLibrary1.dll
+C:\Users\Dell\Desktop\Sliding-column-cipher\POD Szyfr PK\bin\Debug\ClassLibrary1.pdb
+C:\Users\Dell\Desktop\Sliding-column-cipher\POD Szyfr PK\obj\Debug\POD Szyfr PK.csprojAssemblyReference.cache
+C:\Users\Dell\Desktop\Sliding-column-cipher\POD Szyfr PK\obj\Debug\POD Szyfr PK.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\Sliding-column-cipher\POD Szyfr PK\obj\Debug\POD Szyfr PK.csproj.CopyComplete
+C:\Users\Dell\Desktop\Sliding-column-cipher\POD Szyfr PK\obj\Debug\POD Szyfr PK.exe
+C:\Users\Dell\Desktop\Sliding-column-cipher\POD Szyfr PK\obj\Debug\POD Szyfr PK.pdb

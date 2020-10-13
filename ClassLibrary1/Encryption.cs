@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.IO;
 
 namespace ClassLibrary1
 {
@@ -17,7 +19,7 @@ namespace ClassLibrary1
             char[] charTable = plainText.ToCharArray();
             char[] keyTable = keyWord.ToCharArray();
             char[] abcTable = new char[26];
-            char[,] normalTable = new char[n, m];
+            char[,] normalTable = new char[m, n];
             char[,] encryptTable = new char[n, n + m - 1];
             //===============================
             //INDEKSOWANIE SŁOWA KLUCZ
@@ -45,9 +47,9 @@ namespace ClassLibrary1
 
             //===============================
             //WPISYWANIE TEKSTU JAWNEGO DO MACIERZY
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < m; i++)
             {
-                for (int j = 0; j < m; j++)
+                for (int j = 0; j < n; j++)
                 {
                     if (k >= charTable.Length)
                         normalTable[i, j] = 'x';
@@ -58,9 +60,9 @@ namespace ClassLibrary1
             }
 
             //WYŚWIETLANIE TEKSTU JAWNEGO Z MACIERZY
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < m; i++)
             {
-                for (int j = 0; j < m; j++)
+                for (int j = 0; j < n; j++)
                 {
                     if (normalTable[i, j] == ' ')
                         Console.Write(" _ ");
@@ -74,9 +76,9 @@ namespace ClassLibrary1
             var shifted = new List<char>();
             int lastMaxColumn = n - 1;
 
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < m; i++)
             {
-                for (int j = 0; j < m; j++)
+                for (int j = 0; j < n; j++)
                 {
                     if (j == lastMaxColumn)
                     {
@@ -106,6 +108,17 @@ namespace ClassLibrary1
                         shiftInt++;
                     }
                 }
+            }
+
+            //WYPISYWANIE PIRAMIDY
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n + m - 1; j++)
+                {
+                    Console.Write($"{(encryptTable[i, j] == 0 ? '-' : encryptTable[i, j])} ");
+                }
+
+                Console.WriteLine();
             }
 
             //SPISYWANIE KOLUMN W ODPOWIEDNIEJ KOLEJNOSCI DO TABLICY WYNIKOWEJ (OTRZYMYWANIE SZYFROGRAMU)

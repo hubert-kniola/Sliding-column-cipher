@@ -4,3 +4,21 @@ C:\Users\Dell\source\repos\POD Szyfr PK\ClassLibrary1\obj\Debug\ClassLibrary1.cs
 C:\Users\Dell\source\repos\POD Szyfr PK\ClassLibrary1\obj\Debug\ClassLibrary1.csproj.CoreCompileInputs.cache
 C:\Users\Dell\source\repos\POD Szyfr PK\ClassLibrary1\obj\Debug\ClassLibrary1.dll
 C:\Users\Dell\source\repos\POD Szyfr PK\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+C:\Users\bk\Desktop\Sliding-column-cipher\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Users\bk\Desktop\Sliding-column-cipher\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\bk\Desktop\Sliding-column-cipher\ClassLibrary1\obj\Debug\ClassLibrary1.csprojAssemblyReference.cache
+C:\Users\bk\Desktop\Sliding-column-cipher\ClassLibrary1\obj\Debug\ClassLibrary1.csproj.CoreCompileInputs.cache
+C:\Users\bk\Desktop\Sliding-column-cipher\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Users\bk\Desktop\Sliding-column-cipher\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+C:\Users\Dell\Desktop\Sliding-column-cipher\Sliding-column-cipher\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Users\Dell\Desktop\Sliding-column-cipher\Sliding-column-cipher\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\Dell\Desktop\Sliding-column-cipher\Sliding-column-cipher\ClassLibrary1\obj\Debug\ClassLibrary1.csprojAssemblyReference.cache
+C:\Users\Dell\Desktop\Sliding-column-cipher\Sliding-column-cipher\ClassLibrary1\obj\Debug\ClassLibrary1.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\Sliding-column-cipher\Sliding-column-cipher\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Users\Dell\Desktop\Sliding-column-cipher\Sliding-column-cipher\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+C:\Users\Dell\Desktop\Sliding-column-cipher\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Users\Dell\Desktop\Sliding-column-cipher\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\Dell\Desktop\Sliding-column-cipher\ClassLibrary1\obj\Debug\ClassLibrary1.csprojAssemblyReference.cache
+C:\Users\Dell\Desktop\Sliding-column-cipher\ClassLibrary1\obj\Debug\ClassLibrary1.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\Sliding-column-cipher\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Users\Dell\Desktop\Sliding-column-cipher\ClassLibrary1\obj\Debug\ClassLibrary1.pdb

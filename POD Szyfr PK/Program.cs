@@ -9,6 +9,7 @@ namespace POD_Szyfr_PK
 {
     class Program
     {
+
         static void Main(string[] args)
         {
             int x = default;
@@ -47,9 +48,15 @@ namespace POD_Szyfr_PK
                             break;
                         case 3:
                             Console.WriteLine("Wybrano szyfrowanie z pliku!");
+                            Console.WriteLine("Proponowane pliki");
+                            string[] efiles = Directory.GetFiles(@"C:\Users\Dell\Desktop\Sliding-column-cipher", "*.txt");
+                            foreach(var element in efiles)
+                            {
+                                Console.WriteLine(element);
+                            }
                             Console.Write("Podaj nazwę pliku: ");
                             fileName = Console.ReadLine();
-                            StreamReader ereader = new StreamReader(@"C:\Users\Dell\source\repos\POD Szyfr PK\" + fileName + ".txt");
+                            StreamReader ereader = new StreamReader(@"C:\Users\Dell\Desktop\Sliding-column-cipher" + fileName + ".txt");
                             {
                                 plainText = ereader.ReadLine();
                                 keyWord = ereader.ReadLine();
@@ -60,9 +67,15 @@ namespace POD_Szyfr_PK
                             break;
                         case 4:
                             Console.WriteLine("Wybrano deszyfrowanie z pliku!");
+                            Console.WriteLine("Proponowane pliki");
+                            string[] sfiles = Directory.GetFiles(@"C:\Users\Dell\Desktop\Sliding-column-cipher", "*.txt");
+                            foreach (var element in sfiles)
+                            {
+                                Console.WriteLine(element);
+                            }
                             Console.Write("Podaj nazwę pliku: ");
                             fileName = Console.ReadLine();
-                            StreamReader dreader = new StreamReader(@"C:\Users\Dell\source\repos\POD Szyfr PK\" + fileName + ".txt");
+                            StreamReader dreader = new StreamReader(@"C:\Users\Dell\Desktop\Sliding-column-cipher" + fileName + ".txt");
                             {
                                 encryptText = dreader.ReadLine();
                                 keyWord = dreader.ReadLine();
