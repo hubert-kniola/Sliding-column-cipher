@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
 
 namespace ClassLibrary1
 {
@@ -50,7 +52,7 @@ namespace ClassLibrary1
                 }
             }
 
-            //WYPISYWANIE PIRAMIDY
+            //WYŚWIETLANIE PIRAMIDY
             for (int i = 0; i < key.Length; i++)
             {
                 for (int j = 0; j < key.Length + width - 1; j++)
@@ -69,28 +71,34 @@ namespace ClassLibrary1
                 var index = Array.IndexOf(keyArray, c);
                 keyArray[index] = '?';
 
-                for (int i = 0; i < index + 1; i++)
+                /*for (int i = 0; i < index + 1; i++)
                 {
                     if (pyramid[i, index] == 'X')
                         pyramid[i, index] = text[textIndex++];
+                }*/
+
+
+                while (index < key.Length + width - 1)
+                {
+
+                    for (int i = 0; i < key.Length; i++)
+                    {
+                        if (pyramid[i, index] == 'X')
+                        {
+                            pyramid[i, index] = text[textIndex++];
+
+                        }
+                        else
+                        {
+                            break;
+                        }
+                    }
+                    index += key.Length;
                 }
 
-                var mirrorIndex = index + key.Length;
-                for (int i = 0; i < mirrorIndex + 1; i++)
-                {
-                    if (mirrorIndex <= key.Length + width - 1 && pyramid[i, mirrorIndex] == 'X')
-                    {
-                        pyramid[i, mirrorIndex] = text[textIndex++];
-                        
-                    }
-                    else
-                    {
-                        break;
-                    }
-                }
             }
 
-            //WYPISYWANIE PIRAMIDY
+            //WYŚWIETLANIE PIRAMIDY
             for (int i = 0; i < key.Length; i++)
             {
                 for (int j = 0; j < key.Length + width - 1; j++)
@@ -101,6 +109,78 @@ namespace ClassLibrary1
                 Console.WriteLine();
             }
 
+            //WPISYWANIE PIRAMIDY DO LISTY
+            var shifted = new List<char>();
+            for (int i = 0; i < key.Length; i++)
+            {
+                for (int j = 0; j < key.Length + width - 1; j++)
+                {
+                    if (pyramid[i, j] != 0)
+                    {
+                        shifted.Add(pyramid[i, j]);
+                    }
+                }
+            }
+            Console.WriteLine(String.Join(" ", shifted));
+
+            //WPISYWANIE LISTY W MACIERZ
+            char[,] normalTable = new char[width, key.Length];
+            int lastMaxColumn = key.Length - 1;
+            var shiftIndex = 0;
+            for (int i = 0; i < width; i++)
+            {
+                for (int j = 0; j < key.Length; j++)
+                {
+                    if (j == lastMaxColumn)
+                    {
+                        for (int l = i; l < width; l++)
+                        {
+                            normalTable[l, j] = shifted[shiftIndex++];
+                        }
+
+                        lastMaxColumn--;
+                        break;
+                    }
+
+                    normalTable[i, j] = shifted[shiftIndex++];
+                }
+            }
+
+            //TWORZENIE TEKSTY JAWNEGO
+            var plainText = "";
+            for (int i = 0; i < width; i++)
+            {
+                for (int j = 0; j < key.Length; j++)
+                {
+                    if (normalTable[i, j] == '_')
+                    {
+                        Console.Write(" _ ");
+                        plainText += " ";
+                    }
+                    else
+                    {
+                        Console.Write($" {normalTable[i, j]} ");
+                        plainText += normalTable[i, j];
+                    }
+
+                }
+                Console.WriteLine();
+            }
+
+            var howMany = text.Length - text.Replace("X", "").Length;
+            plainText = plainText.Remove(plainText.Length - howMany);;
+            Console.WriteLine($"Tekst jawny: {plainText}");
+
+            //ZAPISYWANIE DO PLIKU
+            string[] lines = { plainText, key };
+
+            string docPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
+            using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, "decryptionResult.txt")))
+            {
+                foreach (string line in lines)
+                    outputFile.WriteLine(line);
+            }
         }
     }
 }

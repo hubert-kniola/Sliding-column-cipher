@@ -52,7 +52,7 @@ namespace ClassLibrary1
                 for (int j = 0; j < n; j++)
                 {
                     if (k >= charTable.Length)
-                        normalTable[i, j] = 'x';
+                        normalTable[i, j] = 'X';
                     else
                         normalTable[i, j] = charTable[k];
                     k++;
@@ -102,7 +102,7 @@ namespace ClassLibrary1
             {
                 for (int j = 0; j < n + m - 1; j++)
                 {
-                    if (j >= i && j <= n + m - 2 - i)
+                    if (j >= i && j <= n + m - 2 - i && shiftInt < shifted.Count)
                     {
                         encryptTable[i, j] = shifted[shiftInt];
                         shiftInt++;
@@ -110,7 +110,7 @@ namespace ClassLibrary1
                 }
             }
 
-            //WYPISYWANIE PIRAMIDY
+            //WYŚWIETLANIE PIRAMIDY
             for (int i = 0; i < n; i++)
             {
                 for (int j = 0; j < n + m - 1; j++)
@@ -136,14 +136,28 @@ namespace ClassLibrary1
                     {
                         if (encryptTable[i, encIndex] == 0) break;
 
-                        result += encryptTable[i, encIndex];
+                        if (encryptTable[i, encIndex] == ' ')
+                            result += '_';
+                        else
+                            result += encryptTable[i, encIndex];
                     }
 
                     encIndex += n;
                 }
             }
-            Console.Write("Szyfrogram: ");
-            Console.WriteLine(result);
+            Console.WriteLine($"Szyfrogram: {result}");
+
+
+            //ZAPISYWANIE DO PLIKU
+            string[] lines = { result, keyWord };
+
+            string docPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
+            using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, "encryptionResult.txt")))
+            {
+                foreach (string line in lines)
+                    outputFile.WriteLine(line);
+            }
         }
     }
 }
