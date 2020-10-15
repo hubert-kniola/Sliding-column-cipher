@@ -44,7 +44,7 @@ namespace ClassLibrary1
             {
                 for (int j = 0; j < key.Length + width - 1; j++)
                 {
-                    if (j >= i && j <= key.Length + width - 2 - i)
+                    if (j >= i && j <= key.Length + width - 2 - i && i < width)
                     {
                         pyramid[i, j] = 'X';
                         shiftInt++;

@@ -11,16 +11,16 @@ namespace ClassLibrary1
     {
         static public void Encrypt(string keyWord, string plainText)
         {
-            int k = 0;
-            int n = keyWord.Length;
-            int m = plainText.Length / n + 1;
+            var k = 0;
+            var n = keyWord.Length;
+            var m = plainText.Length / n + 1;
             Console.WriteLine("n: " + n + "| m: " + m);
-            int[] valueKeyTable = new int[n];
-            char[] charTable = plainText.ToCharArray();
-            char[] keyTable = keyWord.ToCharArray();
-            char[] abcTable = new char[26];
-            char[,] normalTable = new char[m, n];
-            char[,] encryptTable = new char[n, n + m - 1];
+            var valueKeyTable = new int[n];
+            var charTable = plainText.ToCharArray();
+            var keyTable = keyWord.ToCharArray();
+            var abcTable = new char[26];
+            var normalTable = new char[m, n];
+            var encryptTable = new char[n, n + m - 1];
             //===============================
             //INDEKSOWANIE SŁOWA KLUCZ
             int index = 0;

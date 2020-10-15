@@ -23,7 +23,7 @@ namespace POD_Szyfr_PK
                 {
                     Console.WriteLine("=========================================");
                     Console.WriteLine("SZYFR PRZEKATNOKOLUMNOWY");
-                    Console.Write("0. Zakoncz dzialanie programu\n1. Szyfrowanie\n2. Deszyfrowanie\n3. Szyfrowanie z pliku\n4. Deszyfrowanie z pliku\n");
+                    Console.Write("0. Zakoncz dzialanie programu\n1. Szyfrowanie\n2. Deszyfrowanie\n3. Szyfrowanie z pliku\n4. Deszyfrowanie z pliku\n5. Czyszczenie konsoli\n");
                     Console.Write("Podaj odpowiedni numer: ");
                     x = Int32.Parse(Console.ReadLine());
                     switch (x)
@@ -84,6 +84,9 @@ namespace POD_Szyfr_PK
                             Console.WriteLine($"Slowo klucz: {keyWord}");
                             Decryption.Decrypt(keyWord, encryptText);
                             break;
+                        case 5:
+                            Console.Clear();
+                            break;
                         default:
                             Console.WriteLine("Podano nieprawidłowy numer!");
                             continue;
@@ -92,7 +95,7 @@ namespace POD_Szyfr_PK
                 catch (FormatException e)
                 {
                     Console.WriteLine("Znak nie jest typu INT");
-                    x = default;
+                    x = 6;
                 }catch(FileNotFoundException e)
                 {
                     Console.WriteLine("Podana nazwa pliku nie istnieje");
