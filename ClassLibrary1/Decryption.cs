@@ -141,8 +141,16 @@ namespace ClassLibrary1
                         lastMaxColumn--;
                         break;
                     }
+                    if(shiftIndex < text.Length)
+                    { 
+                        normalTable[i, j] = shifted[shiftIndex++];
+                    }
+                    else
+                    {
+                        break;
+                    }
+                    
 
-                    normalTable[i, j] = shifted[shiftIndex++];
                 }
             }
 
