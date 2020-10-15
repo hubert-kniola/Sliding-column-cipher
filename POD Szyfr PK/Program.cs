@@ -100,6 +100,10 @@ namespace POD_Szyfr_PK
                 {
                     Console.WriteLine("Podana nazwa pliku nie istnieje");
                 }
+                catch(IOException e)
+                {
+                    Console.WriteLine("Wykryto niezgodnosc! Sprawdz inny tekst");
+                }
             } while (x != 0);
             Console.ReadKey();
         }

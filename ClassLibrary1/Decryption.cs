@@ -14,29 +14,9 @@ namespace ClassLibrary1
 
             var sortedKey = key.ToCharArray();
             var keyArray = key.ToCharArray();
+            if (width * key.Length != text.Length) throw new IOException();
 
             Array.Sort(sortedKey);
-
-            /*var textIndex = 0;
-            foreach (var c in sortedKey)
-            {
-                var index = Array.IndexOf(keyArray, c);
-                keyArray[index] = '?';
-
-
-
-                for (int i = 0; i < index + 1; i++)
-                {
-                    pyramid[i, index] = text[textIndex++];
-                }
-
-                var mirrorIndex = index + key.Length;
-
-                for (int i = 0; i < mirrorIndex - index; i++)
-                {
-
-                }
-            }*/
 
             //WPISYWANIE 'X' W KSZTALT PIRAMIDY DO MACIERZY
             int shiftInt = 0;
