@@ -9,15 +9,12 @@ namespace ClassLibrary1
         public static void Decrypt(string key, string text)
         {
             var width = text.Replace("X", "").Length / key.Length + 1;
-
             var pyramid = new char[key.Length, key.Length + width - 1];
-
             var sortedKey = key.ToCharArray();
             var keyArray = key.ToCharArray();
             if (width * key.Length != text.Length) throw new IOException();
 
             Array.Sort(sortedKey);
-
             //WPISYWANIE 'X' W KSZTALT PIRAMIDY DO MACIERZY
             int shiftInt = 0;
             for (int i = 0; i < key.Length; i++)
@@ -44,7 +41,6 @@ namespace ClassLibrary1
             }
 
             //ZLICZANIE X ORAZ WPISYWANIE ODPOWIEDNIEJ LICZBY ZNAKOW DO KOLUMN
-            var xSpaces = 0;
             var textIndex = 0;
             foreach (var c in sortedKey)
             {
@@ -57,10 +53,8 @@ namespace ClassLibrary1
                         pyramid[i, index] = text[textIndex++];
                 }*/
 
-
                 while (index < key.Length + width - 1)
                 {
-
                     for (int i = 0; i < key.Length; i++)
                     {
                         if (pyramid[i, index] == 'X')
@@ -75,7 +69,6 @@ namespace ClassLibrary1
                     }
                     index += key.Length;
                 }
-
             }
 
             //WYŚWIETLANIE PIRAMIDY
@@ -85,7 +78,6 @@ namespace ClassLibrary1
                 {
                     Console.Write($"{(pyramid[i, j] == 0 ? '-' : pyramid[i, j])} ");
                 }
-
                 Console.WriteLine();
             }
 
@@ -128,9 +120,7 @@ namespace ClassLibrary1
                     else
                     {
                         break;
-                    }
-                    
-
+                    }                 
                 }
             }
 
@@ -161,9 +151,7 @@ namespace ClassLibrary1
 
             //ZAPISYWANIE DO PLIKU
             string[] lines = { plainText, key };
-
             string docPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-
             using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, "decryptionResult.txt")))
             {
                 foreach (string line in lines)

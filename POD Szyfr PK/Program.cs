@@ -9,7 +9,6 @@ namespace POD_Szyfr_PK
 {
     class Program
     {
-
         static void Main(string[] args)
         {
             int x = default;
@@ -94,15 +93,15 @@ namespace POD_Szyfr_PK
                 }
                 catch (FormatException e)
                 {
-                    Console.WriteLine("Znak nie jest typu INT");
+                    Console.WriteLine("[Alert] Znak nie jest typu INT");
                     x = 6;
                 }catch(FileNotFoundException e)
                 {
-                    Console.WriteLine("Podana nazwa pliku nie istnieje");
+                    Console.WriteLine("[Alert] Podana nazwa pliku nie istnieje");
                 }
                 catch(IOException e)
                 {
-                    Console.WriteLine("Wykryto niezgodnosc! Sprawdz inny tekst");
+                    Console.WriteLine("[Alert] Wykryto niezgodnosc! Sprawdz inny tekst");
                 }
             } while (x != 0);
             Console.ReadKey();

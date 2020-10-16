@@ -23,15 +23,14 @@ namespace ClassLibrary1
             var encryptTable = new char[n, n + m - 1];
             //===============================
             //INDEKSOWANIE SŁOWA KLUCZ
-            int index = 0;
+            /*int index = 0;
             for (char letter = 'a'; letter <= 'z'; letter++)
             {
                 abcTable[index++] = letter;
             }
-            Console.WriteLine();
+            Console.WriteLine();*/
 
             var abcKeyList = new Dictionary<int, char>();
-
             Array.Sort(keyTable);
 
             int dex = 1;
@@ -90,7 +89,6 @@ namespace ClassLibrary1
                         lastMaxColumn--;
                         break;
                     }
-
                     shifted.Add(normalTable[i, j]);
                 }
             }
@@ -117,7 +115,6 @@ namespace ClassLibrary1
                 {
                     Console.Write($"{(encryptTable[i, j] == 0 ? '-' : encryptTable[i, j])} ");
                 }
-
                 Console.WriteLine();
             }
 
@@ -141,18 +138,14 @@ namespace ClassLibrary1
                         else
                             result += encryptTable[i, encIndex];
                     }
-
                     encIndex += n;
                 }
             }
             Console.WriteLine($"Szyfrogram: {result}");
 
-
             //ZAPISYWANIE DO PLIKU
             string[] lines = { result, keyWord };
-
             string docPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-
             using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, "encryptionResult.txt")))
             {
                 foreach (string line in lines)
